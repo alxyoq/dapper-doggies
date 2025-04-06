@@ -5,7 +5,7 @@
   "description": "Website for Devon's Dapper Dogs Pet Grooming in Westville, NJ",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "serve -s out",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-pattern 'out/' --ignore-pattern '.next/' || true",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\" --ignore-path .gitignore"
