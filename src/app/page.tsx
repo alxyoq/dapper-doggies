@@ -9,7 +9,7 @@ export default function Home() {
       <section className="relative h-[70vh] bg-cover bg-center flex items-center"
         style={{
           backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/home-page.png)',
-          backgroundPosition: 'center 30%'
+          backgroundPosition: 'center 32%'
         }}>
         <div className="container mx-auto px-4 z-10 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

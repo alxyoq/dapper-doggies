@@ -2,7 +2,6 @@
 const nextConfig = {
   output: 'export',
   distDir: 'out',
-  /* config options here */
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -10,9 +9,8 @@ const nextConfig = {
     unoptimized: true,
     domains: [
       "source.unsplash.com",
-      "images.unsplash.com",
-      "ext.same-assets.com",
-      "ugc.same-assets.com",
+      "images.unsplash.com"
+      // Remove "ext.same-assets.com" and "ugc.same-assets.com" if not needed
     ],
     remotePatterns: [
       {
@@ -24,17 +22,8 @@ const nextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
         pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "ext.same-assets.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "ugc.same-assets.com",
-        pathname: "/**",
-      },
+      }
+      // Remove the patterns for same-assets if not needed
     ],
   },
   typescript: {
