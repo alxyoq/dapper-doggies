@@ -23,7 +23,7 @@ export default function Navbar() {
           {/* Logo and Text, moved further to the left */}
           <Link href="/" className="flex items-center -ml-20">
             <Image
-              src="/images/logo1.png"
+              src="/logo1.png"
               alt="Devon's Dapper Dogs Pet Grooming"
               width={90}
               height={90}
@@ -53,7 +53,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <div className="transition-transform transform hover:scale-110 duration-300 cursor-pointer">
             <div className="flex items-center">
-              <Image src="/images/phone.png" alt="Phone Icon" width={64} height={64} className="mr-2" />
+              <Image src="/phone.png" alt="Phone Icon" width={64} height={64} className="mr-2" />
               <div>
                 <p className="text-black text-lg font-normal">Call for an appointment</p>
                 <p className="text-black text-2xl font-bold">(856) 628-3610</p>
@@ -84,7 +84,7 @@ export default function Navbar() {
                 ))}
                 <div className="mt-4 px-4 transition-transform transform hover:scale-110 duration-300">
                   <div className="flex items-center">
-                    <Image src="/images/phone.png" alt="Phone Icon" width={64} height={64} className="mr-2" />
+                    <Image src="/phone.png" alt="Phone Icon" width={64} height={64} className="mr-2" />
                     <div>
                       <p className="text-black text-lg font-normal">Call for an appointment</p>
                       <p className="text-black text-2xl font-bold">(856) 628-3610</p>

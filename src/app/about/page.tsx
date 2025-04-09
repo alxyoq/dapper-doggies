@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -25,7 +27,7 @@ export default function AboutPage() {
               <div className="md:w-1/3">
                 <div className="relative h-64 w-full rounded-lg overflow-hidden">
                   <Image
-                    src="/images/devon-dapper.jpg"
+                    src="/devon-dapper.jpg" 
                     alt="Devon's Dapper Dogs mobile grooming van"
                     fill
                     className="object-cover"

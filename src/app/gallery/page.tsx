@@ -29,20 +29,20 @@ function RotatingImage({ images, alt }: { images: string[]; alt: string }) {
 const galleryImages = [
   {
     id: 1,
-    src: '/images/logo.png',
+    src: '/logo.png',
     alt: 'Mobile grooming van',
     caption: 'Our fully equipped mobile grooming van brings the salon to your doorstep',
   },
   {
     id: 2,
     // Change the src to an array of image paths for rotating images
-    src: ['/images/louie.jpg', '/images/louie-alt1.jpg', '/images/louie-alt2.jpg', '/images/louie-alt3.jpg', '/images/louie-alt4.jpg', '/images/louie-alt5.jpg'],
+    src: ['/louie.jpg', '/louie-alt1.jpg', '/louie-alt2.jpg', '/louie-alt3.jpg', '/louie-alt4.jpg', '/louie-alt5.jpg'],
     alt: 'Freshly groomed dog',
     caption: 'Our happy clients after grooming',
   },
   {
     id: 3,
-    src: '/images/happy-customer1.jpg',
+    src: '/happy-customer1.jpg',
     alt: 'Dog being groomed',
     caption: 'Professional grooming with personalized attention',
   },
