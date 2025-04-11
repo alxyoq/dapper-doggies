@@ -29,8 +29,8 @@ export default function AboutPage() {
                   <Image
                     src="/devon-dapper.jpg"
                     alt="Devon's Dapper Dogs mobile grooming van"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    className="object-cover"
                     priority
                   />
                 </div>
@@ -117,8 +117,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Mobile Grooming Benefits */}
-        {/* ...no changes needed in the rest of the code */}
         {/* Service Area */}
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Service Area</h2>
