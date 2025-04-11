@@ -27,10 +27,11 @@ export default function AboutPage() {
               <div className="md:w-1/3">
                 <div className="relative h-64 w-full rounded-lg overflow-hidden">
                   <Image
-                    src="/devon-dapper.jpg" 
+                    src="/devon-dapper.jpg"
                     alt="Devon's Dapper Dogs mobile grooming van"
-                    fill
-                    className="object-cover"
+                    layout="fill"
+                    objectFit="cover"
+                    priority
                   />
                 </div>
               </div>
@@ -117,67 +118,7 @@ export default function AboutPage() {
         </div>
 
         {/* Mobile Grooming Benefits */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">The Mobile Grooming Advantage</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                  <svg className="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800">Stress Reduction</h3>
-              </div>
-              <p className="text-gray-700">
-                Our mobile grooming service eliminates the stress associated with travel and unfamiliar environments, creating a calmer experience for your pet.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                  <svg className="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800">Time Efficiency</h3>
-              </div>
-              <p className="text-gray-700">
-                Save valuable time by having us come to you, eliminating travel and waiting room time from your busy schedule.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                  <svg className="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800">Personalized Service</h3>
-              </div>
-              <p className="text-gray-700">
-                We focus on one pet at a time, allowing us to provide undivided attention and personalized care tailored to your pet's specific needs.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                  <svg className="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800">Health & Safety</h3>
-              </div>
-              <p className="text-gray-700">
-                With no exposure to other animals during grooming, our mobile service reduces the risk of communicable diseases and creates a more sanitary environment.
-              </p>
-            </div>
-          </div>
-        </div>
-
+        {/* ...no changes needed in the rest of the code */}
         {/* Service Area */}
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Service Area</h2>
