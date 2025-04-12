@@ -1,47 +1,51 @@
 "use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="relative h-[70vh] bg-cover bg-center flex items-center"
+        className="relative h-[70vh] bg-[length:121%_auto] bg-top md:bg-[center_32%] md:bg-cover bg-center flex items-start md:items-center"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/home-page.png)',
-          backgroundPosition: 'center 32%',
+            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/home-page.png)",
         }}
       >
-        <div className="container mx-auto px-4 z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="container mx-auto px-4 z-20 text-center pt-10 md:pt-0">
+          {/* Desktop: title moved higher with md:-mt-24 */}
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 md:-mt-24">
             Premium Mobile Pet Grooming
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-8">
-            We bring professional grooming services directly to your doorstep
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-teal-600 hover:bg-teal-700">
-              <Link href="/contact">Book Now</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="bg-white/10 hover:bg-white/20 text-white border-white"
-            >
-              <a href="tel:+18566283610">Call (856) 628-3610</a>
-            </Button>
+
+          {/* On mobile keep original spacing; on desktop leave tagline/buttons as‑is */}
+          <div className="mt-60 md:mt-48">
+            <p className="text-xl md:text-2xl text-white mb-4">
+              We bring professional grooming services directly to your doorstep
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button asChild size="lg" className="bg-teal-600 hover:bg-teal-700">
+                <Link href="/contact">Book Now</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="bg-white/10 hover:bg-white/20 text-white border-white"
+              >
+                <a href="tel:+18566283610">Call (856) 628-3610</a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* About Mobile Grooming */}
-      <section className="py-16 bg-white">
+      {/* About Mobile Grooming Section */}
+      <section className="py-16 bg-white -mt-10 relative z-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -55,6 +59,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1 */}
             <div className="bg-teal-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="bg-teal-100 w-16 h-16 flex items-center justify-center rounded-full mb-4 mx-auto">
                 <svg
@@ -73,14 +78,15 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2 text-center">
-                Stress-Free Experience
+                Stress‑Free Experience
               </h3>
               <p className="text-gray-600 text-center">
-                No more stressful car rides or waiting in cages. Your pet is groomed
-                in a familiar environment.
+                No more stressful car rides or waiting in cages. Your pet is
+                groomed in a familiar environment.
               </p>
             </div>
 
+            {/* Card 2 */}
             <div className="bg-teal-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="bg-teal-100 w-16 h-16 flex items-center justify-center rounded-full mb-4 mx-auto">
                 <svg
@@ -99,7 +105,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2 text-center">
-                One-on-One Attention
+                One‑on‑One Attention
               </h3>
               <p className="text-gray-600 text-center">
                 Each pet receives dedicated, personalized care throughout their
@@ -107,6 +113,7 @@ export default function Home() {
               </p>
             </div>
 
+            {/* Card 3 */}
             <div className="bg-teal-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="bg-teal-100 w-16 h-16 flex items-center justify-center rounded-full mb-4 mx-auto">
                 <svg
@@ -128,7 +135,8 @@ export default function Home() {
                 Convenient Scheduling
               </h3>
               <p className="text-gray-600 text-center">
-                We work around your schedule, making pet grooming fit seamlessly into your busy life.
+                We work around your schedule, making pet grooming fit seamlessly
+                into your busy life.
               </p>
             </div>
           </div>
@@ -142,49 +150,50 @@ export default function Home() {
 }
 
 function GallerySection() {
+  /* Rotating image component */
   function RotatingImage({ images, alt }: { images: string[]; alt: string }) {
     const [currentIndex, setCurrentIndex] = useState(0);
+
     useEffect(() => {
-      const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-      }, 3000);
+      const interval = setInterval(
+        () => setCurrentIndex((i) => (i + 1) % images.length),
+        3000
+      );
       return () => clearInterval(interval);
     }, [images]);
+
     return (
-      <Image
-        src={images[currentIndex]}
-        alt={alt}
-        fill
-        className="object-cover"
-      />
+      <Image src={images[currentIndex]} alt={alt} fill className="object-cover" />
     );
   }
 
+  /* Gallery images */
   const galleryImages = [
     {
       id: 1,
-      src: '/logo.png',
-      alt: 'Mobile grooming van',
-      caption: 'Our fully equipped mobile grooming van brings the salon to your doorstep',
+      src: "/logo.png",
+      alt: "Mobile grooming van",
+      caption:
+        "Our fully equipped mobile grooming van brings the salon to your doorstep",
     },
     {
       id: 2,
       src: [
-        '/louie.jpg',
-        '/louie-alt1.jpg',
-        '/louie-alt2.jpg',
-        '/louie-alt3.jpg',
-        '/louie-alt4.jpg',
-        '/louie-alt5.jpg',
+        "/louie.jpg",
+        "/louie-alt1.jpg",
+        "/louie-alt2.jpg",
+        "/louie-alt3.jpg",
+        "/louie-alt4.jpg",
+        "/louie-alt5.jpg",
       ],
-      alt: 'Freshly groomed dog',
-      caption: 'Our happy clients after grooming',
+      alt: "Freshly groomed dog",
+      caption: "Our happy clients after grooming",
     },
     {
       id: 3,
-      src: '/happy-customer1.jpg',
-      alt: 'Dog being groomed',
-      caption: 'Professional grooming with personalized attention',
+      src: "/happy-customer1.jpg",
+      alt: "Dog being groomed",
+      caption: "Professional grooming with personalized attention",
     },
   ];
 
@@ -218,7 +227,8 @@ function GallerySection() {
 
         <div className="mt-16 text-center">
           <p className="text-xl text-gray-700 mb-6">
-            Want to see your pet looking their best after a mobile grooming session?
+            Want to see your pet looking their best after a mobile grooming
+            session?
           </p>
           <Button asChild className="bg-teal-600 hover:bg-teal-700">
             <Link href="/contact">Book Your Appointment Today</Link>

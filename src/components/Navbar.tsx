@@ -20,8 +20,8 @@ export default function Navbar() {
     <nav className="bg-white py-8 sticky top-0 z-50 shadow-sm border-b border-gray-200">
       <div className="container mx-auto px-2 max-w-7xl flex justify-between items-center">
         <div className="flex items-center space-x-8">
-          {/* Logo and Text, moved further to the left */}
-          <Link href="/" className="flex items-center -ml-20">
+          {/* Logo and Text - responsive margin adjustment */}
+          <Link href="/" className="flex items-center ml-0 md:-ml-20">
             <Image
               src="/logo1.png"
               alt="Devon's Dapper Dogs Pet Grooming"
@@ -35,7 +35,7 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Navigation with closer spacing and enhanced hover effect */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-4">
             {navigationLinks.map((link) => (
               <Link

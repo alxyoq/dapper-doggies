@@ -1,3 +1,4 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Inter, Quattrocento_Sans, Quattrocento } from "next/font/google";
 import "./globals.css";
@@ -26,7 +27,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${quattrocentoSans.variable} ${quattrocento.variable} font-sans min-h-screen flex flex-col`}>
+      <body
+        suppressHydrationWarning
+        className={`${inter.variable} ${quattrocentoSans.variable} ${quattrocento.variable} font-sans min-h-screen flex flex-col`}
+      >
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
