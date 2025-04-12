@@ -17,9 +17,9 @@ const quattrocento = Quattrocento({
   variable: "--font-quattrocento",
 });
 
+// Remove description and other metadata inputs here so that only head.tsx controls them.
 export const metadata: Metadata = {
   title: "Devon's Dapper Dogs Pet Grooming",
-  description: "Mobile Dog and Cat Grooming Service - The royal treatment your pet deserves, with the convenience you desire.",
 };
 
 export default function RootLayout({
