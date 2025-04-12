@@ -41,9 +41,14 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-teal-600 hover:bg-transparent px-3 py-2 text-xl font-semibold transition-transform transform hover:scale-125 duration-300 ease-in-out hover:shadow-lg"
+                className="px-3 py-2 hover:bg-transparent"
               >
-                {link.label}
+                <div className="transition-all transform duration-500 ease-in-out cursor-pointer 
+                                hover:scale-125 hover:rotate-2 hover:text-teal-600">
+                  <span className="text-gray-700 text-xl font-semibold">
+                    {link.label}
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
@@ -53,7 +58,13 @@ export default function Navbar() {
         <div className="hidden md:block">
           <div className="transition-transform transform hover:scale-110 duration-300 cursor-pointer">
             <div className="flex items-center">
-              <Image src="/phone.png" alt="Phone Icon" width={64} height={64} className="mr-2" />
+              <Image 
+                src="/phone.png" 
+                alt="Phone Icon" 
+                width={64} 
+                height={64} 
+                className="mr-2" 
+              />
               <div>
                 <p className="text-black text-lg font-normal">Call for an appointment</p>
                 <p className="text-black text-2xl font-bold">(856) 628-3610</p>
@@ -70,27 +81,40 @@ export default function Navbar() {
                 <Menu size={28} />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[250px] sm:w-[300px]">
+            <SheetContent side="right" className="w-[250px] sm:w-[300px] bg-white">
               <div className="flex flex-col gap-4 mt-8">
-                {navigationLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="block px-4 py-2 text-gray-700 hover:bg-transparent rounded transition-transform hover:scale-125 duration-300 ease-in-out hover:shadow-lg"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-                <div className="mt-4 px-4 transition-transform transform hover:scale-110 duration-300">
+                {/* Mobile Call Info moved to the top for clear visibility */}
+                <div className="px-4 transition-transform transform hover:scale-110 duration-300 cursor-pointer">
                   <div className="flex items-center">
-                    <Image src="/phone.png" alt="Phone Icon" width={64} height={64} className="mr-2" />
+                    <Image
+                      src="/phone.png"
+                      alt="Phone Icon"
+                      width={64}
+                      height={64}
+                      className="mr-2 block"
+                    />
                     <div>
                       <p className="text-black text-lg font-normal">Call for an appointment</p>
                       <p className="text-black text-2xl font-bold">(856) 628-3610</p>
                     </div>
                   </div>
                 </div>
+                {/* Navigation Links */}
+                {navigationLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-4 py-2 hover:bg-transparent rounded"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <div className="transition-all transform duration-500 ease-in-out cursor-pointer 
+                                    hover:scale-125 hover:rotate-2 hover:text-teal-600">
+                      <span className="text-gray-700 text-xl font-semibold">
+                        {link.label}
+                      </span>
+                    </div>
+                  </Link>
+                ))}
               </div>
             </SheetContent>
           </Sheet>
