@@ -141,7 +141,7 @@ function GallerySection() {
   const galleryImages = [
     {
       id: 1,
-      src: "/logo.png",
+      src: "/three-van.png",
       alt: "Mobile grooming van",
       caption:
         "Our fully equipped mobile grooming van brings the salon to your doorstep",
