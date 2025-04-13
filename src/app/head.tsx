@@ -1,14 +1,9 @@
 // app/head.tsx
 
 export const metadata = {
-  // Browser tab title
   title: "Devon's Dapper Dogs Pet Grooming",
-  
-  // General site description
   description:
     "Mobile Dog Grooming Service – The royal treatment your pet deserves, with the convenience you desire.",
-  
-  // Open Graph (Facebook, Instagram) metadata
   openGraph: {
     type: "website",
     url: "https://dapperdoggies.com/",
@@ -17,30 +12,53 @@ export const metadata = {
       "Mobile Dog Grooming Service – The royal treatment your pet deserves, with the convenience you desire.",
     images: [
       {
-        url: "https://dapperdoggies.com/logo-v3.png",
-        width: 1200,      // Update if needed
-        height: 1200,     // Update if needed
+        url: "https://dapperdoggies.com/logo.png",
+        width: 1200,
+        height: 1200,
         alt: "Devon's Dapper Dogs Pet Grooming Logo",
       },
     ],
   },
-
-  // Twitter metadata
   twitter: {
     card: "summary_large_image",
     url: "https://dapperdoggies.com/",
     title: "Devon's Dapper Dogs Pet Grooming",
     description:
       "Mobile Dog Grooming Service – The royal treatment your pet deserves, with the convenience you desire.",
-    images: ["https://dapperdoggies.com/logo-v3.png"],
+    images: ["https://dapperdoggies.com/logo.png"],
   },
 };
 
 export default function Head() {
   return (
     <>
-      {/* Device responsiveness */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      {/* Explicit Open Graph Tags */}
+      <meta property="og:url" content="https://dapperdoggies.com/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Devon's Dapper Dogs Pet Grooming" />
+      <meta
+        property="og:description"
+        content="Mobile Dog Grooming Service – The royal treatment your pet deserves, with the convenience you desire."
+      />
+      <meta property="og:image" content="https://dapperdoggies.com/logo.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="1200" />
+      <meta
+        property="og:image:alt"
+        content="Devon's Dapper Dogs Pet Grooming Logo"
+      />
+
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="https://dapperdoggies.com/" />
+      <meta name="twitter:title" content="Devon's Dapper Dogs Pet Grooming" />
+      <meta
+        name="twitter:description"
+        content="Mobile Dog Grooming Service – The royal treatment your pet deserves, with the convenience you desire."
+      />
+      <meta name="twitter:image" content="https://dapperdoggies.com/logo.png" />
 
       {/* Favicon and App Icons */}
       <link
@@ -64,8 +82,6 @@ export default function Head() {
       <link rel="shortcut icon" href="/favicon.ico" />
       <link rel="manifest" href="/site.webmanifest" />
 
-      {/* Extra <title> for older Next.js usage;
-          The metadata API sets the actual <title> for crawlers. */}
       <title>Devon's Dapper Dogs Pet Grooming</title>
     </>
   );
