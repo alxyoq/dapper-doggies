@@ -23,7 +23,7 @@ export default function Navbar() {
           {/* Logo and Text - responsive margin adjustment */}
           <Link href="/" className="flex items-center ml-0 md:-ml-20">
             <Image
-              src="/logo.png"
+              src="/logo-v3.png"
               alt="Devon's Dapper Dogs Pet Grooming"
               width={90}
               height={90}
