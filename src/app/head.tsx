@@ -20,14 +20,14 @@ export default function Head() {
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Devon's Dapper Dogs Pet Grooming" />
       <meta property="og:description" content="Mobile Dog Grooming Service – The royal treatment your pet deserves, with the convenience you desire." />
-      <meta property="og:image" content="https://dapperdoggies.com/home-page.png" />
+      <meta property="og:image" content="https://dapperdoggies.com/logo.png" />
 
       {/* Twitter Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content="https://dapperdoggies.com/" />
       <meta name="twitter:title" content="Devon's Dapper Dogs Pet Grooming" />
       <meta name="twitter:description" content="Mobile Dog Grooming Service – The royal treatment your pet deserves, with the convenience you desire." />
-      <meta name="twitter:image" content="https://dapperdoggies.com/home-page.png" />
+      <meta name="twitter:image" content="https://dapperdoggies.com/logo.png" />
 
       <title>Devon's Dapper Dogs Pet Grooming</title>
     </>
