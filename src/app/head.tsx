@@ -12,7 +12,7 @@ export const metadata = {
       "Mobile Dog Grooming Service – The royal treatment your pet deserves, with the convenience you desire.",
     images: [
       {
-        url: "https://dapperdoggies.com/logo.png",
+        url: "https://dapperdoggies.com/logo-v3.png",
         width: 1200,
         height: 1200,
         alt: "Devon's Dapper Dogs Pet Grooming Logo",
@@ -25,7 +25,7 @@ export const metadata = {
     title: "Devon's Dapper Dogs Pet Grooming",
     description:
       "Mobile Dog Grooming Service – The royal treatment your pet deserves, with the convenience you desire.",
-    images: ["https://dapperdoggies.com/logo.png"],
+    images: ["https://dapperdoggies.com/logo-v3.png"],
   },
 };
 
@@ -42,7 +42,7 @@ export default function Head() {
         property="og:description"
         content="Mobile Dog Grooming Service – The royal treatment your pet deserves, with the convenience you desire."
       />
-      <meta property="og:image" content="https://dapperdoggies.com/logo.png" />
+      <meta property="og:image" content="https://dapperdoggies.com/logo-v3.png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="1200" />
       <meta
